@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration and Login</title>
+    <link rel="stylesheet" href="StyleLogin.css">
+    <script type="text/javascript">
+        function fnLogin(){
+        const email = document.getElementById("login-email").value;
+        const password = document.getElementById("login-password").value;
+        var a = sessionStorage.getItem("Email");
+        var b = sessionStorage.getItem("Password");
+        console.log(a);
+        console.log(b);
+        if (email==a || password==b) {
+            // Login successful, redirect to the movie search page
+            window.location.href = "movie.html"; // Redirect to the movie search page
+        } else {
+            // Login failed, display an error message
+            alert("Login failed. Please check your credentials.");
+        }
+        }
+    </script>
+</head>
+<body>
+        <div class="form-container">
+            <div class="outer-box">
+                <img src="https://img.freepik.com/free-vector/tablet-login-concept-illustration_114360-7863.jpg?w=740&t=st=1693681306~exp=1693681906~hmac=5c0cbaf46c19089f3b0fa41641ef141c142d85d01ee864da87b50c0ebde79ecd" alt="Image Description" width="450" height="500">
+                <div class="inner-box">
+                    <div class="form-container">
+                        <h1>Login</h1>
+                        <form id="login-form">
+                            <p>Username</p>
+                            <input type="Email" id="login-email" placeholder=" Enter Email" required>
+                            <p>Username</p>
+                            <input type="Password" id="login-password" placeholder=" Enter Password" required>
+                            <button type="button" onclick="fnLogin()">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+</body>
+</html>

@@ -1,0 +1,119 @@
+/* Add your custom CSS styles here */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+#search-input {
+    margin-bottom: 20px;
+    font-size: 16px;
+    height: 19px;
+    width: 250px;
+    padding: 10px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+button {
+    padding: 10px 20px;
+    height: 42.5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#results-container {
+    gap:50px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two movies in one row */
+    grid-gap: 20px; /* Gap between movies */
+    justify-content: center;
+}
+
+.movie-item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    width: 277px;
+    justify-content: center;
+    position: relative;
+    left: 190px;
+}
+
+.movie-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.movie-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.movie-year {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.movie-rating {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.movie-description {
+    font-size: 14px;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+.movie-description {
+    display: none;
+}
+
+/* Show movie description when the image is clicked */
+.movie-image:hover + .movie-description,
+.movie-description.show-description {
+    display: block;
+}
